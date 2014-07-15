@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/nilmini/.config/terminator'
+let g:netrw_dirhist_2='/home/nilmini/Desktop/Classes/Research/gsfssn'
+let g:netrw_dirhist_3='/home/nilmini/Desktop/Classes/Research/bwssn/virtualclock_2013'
+let g:netrw_dirhist_4='/home/nilmini/Desktop'
+let g:netrw_dirhist_5='/home/nilmini/NIU/fmm3d/trunk/tmp'
+let g:netrw_dirhist_6='/home/nilmini/.vim'
+let g:netrw_dirhist_7='/home/nilmini/Ubuntu One/Shared With Me'
