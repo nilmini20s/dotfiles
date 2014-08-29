@@ -107,22 +107,15 @@ fi
 alias vim='gvim -v'
 alias rm='rm -i'
 alias terminator="terminator -l mylayout -p myprofile"
-alias untar="tar -xvf"
-alias untargz="tar -zxvf"
-alias untarbzip="tar -jxvf"
+alias untar="tar -xf"
+alias untargz="tar -zxf"
+alias untarbzip="tar -jxf"
 alias grep="grep -n --color"
 alias egrep="egrep -n --color"
-alias go="xdg-open"
+alias go="xdg-open 2>/dev/null"
 alias tmux="TERM=screen-256color-bce tmux"
 alias ls="ls -lt --color"
 export alias
-
-export PATH=$PATH:~/Desktop/Classes/583/build/Debug+Asserts/bin
-#export PATH=$PATH:~/mybinaries/mahout-distribution-0.6/bin
-#export PATH=$PATH:~/mybinaries/hive-0.11.0/bin
-
-export OPENAIR0=~/Desktop/Classes/Research/OAI/openair0
-source $OPENAIR0/openair0.bash
 
 # enable bash functions
 if [ -f ~/.bash_functions ]; then
@@ -138,3 +131,4 @@ if [ -n "$DISPLAY" ]; then
 fi
 
 # End Added by Nilmini Abeyratne
+export LD_LIBRARY_PATH=~/sst/local/packages/boost-1.54/lib:/usr/lib/openmpi/lib:$LD_LIBRARY_PATH
