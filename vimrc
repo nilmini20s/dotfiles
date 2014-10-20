@@ -56,8 +56,8 @@ let NERDTreeShowBookmarks=1
 set number
 set smartindent
 set expandtab
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set hlsearch
 set nowrap
 set cursorline
@@ -66,7 +66,7 @@ set cursorline
 
 set t_Co=256
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-colorscheme desertEx
+colorscheme candycode
 "End Added by Nilmini Abeyratne
 
 
