@@ -1,0 +1,5 @@
+pane	0	0	:ssh	0	:-	0	:/home/nilmini	1	ssh	:ssh sabeyrat@simpool
+pane	0	1	:bash	1	:*	0	:/home/nilmini	1	bash	:
+window	0	0	0	:-	a7cd,134x109,0,0,0
+window	0	1	1	:*	a7ce,134x109,0,0,1
+state	0	

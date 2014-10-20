@@ -1,0 +1,4 @@
+pane	0	0	:ssh	1	:*	0	:/home/nilmini	0	ssh	:ssh sabeyrat@simpool
+pane	0	0	:ssh	1	:*	1	:/home/nilmini	1	ssh	:ssh sabeyrat@simpool
+window	0	0	1	:*	ccba,134x109,0,0[134x54,0,0,0,134x54,0,55,1]
+state	0	0

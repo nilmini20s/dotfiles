@@ -1,0 +1,4 @@
+pane	0	0	:bash	1	:*	0	:/home/nilmini	0	bash	:
+pane	0	0	:bash	1	:*	1	:/home/nilmini	1	bash	:
+window	0	0	1	:*	6108,239x58,0,0{119x58,0,0,0,119x58,120,0,1}
+state	0	
