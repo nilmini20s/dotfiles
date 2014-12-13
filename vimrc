@@ -14,6 +14,7 @@ runtime! debian.vim
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
 "set compatible
+set nocompatible              " be iMproved, required
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
@@ -79,6 +80,21 @@ augroup END
 
 au FileType cpp set foldmethod=syntax
 au FileType c set foldmethod=syntax
+
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 "End Added by Nilmini Abeyratne
 
