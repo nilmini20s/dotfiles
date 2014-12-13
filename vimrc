@@ -63,10 +63,23 @@ set nowrap
 set cursorline
 "set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,$02c%2V\ %P%*
 "set laststatus=2
+set splitbelow
+set splitright
 
 set t_Co=256
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 colorscheme candycode
+
+" Vimscript file settings ----------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+au FileType cpp set foldmethod=syntax
+au FileType c set foldmethod=syntax
+
 "End Added by Nilmini Abeyratne
 
 
