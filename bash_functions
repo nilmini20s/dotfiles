@@ -47,6 +47,12 @@ function cd ()
     ls -l
   fi
 }
+function gdiff ()
+{
+    git diff $@ > gitdiff.output
+    vim gitdiff.output
+    rm -f gitdiff.output
+}
 
 #function cd ()
 #{
