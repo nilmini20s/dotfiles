@@ -36,7 +36,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -49,8 +49,31 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# ANSI color codes
+RS="\[\033[0m\]"    # reset
+HC="\[\033[1m\]"    # hicolor
+UL="\[\033[4m\]"    # underline
+INV="\[\033[7m\]"   # inverse background and foreground
+FBLK="\[\033[30m\]" # foreground black
+FRED="\[\033[31m\]" # foreground red
+FGRN="\[\033[32m\]" # foreground green
+FYEL="\[\033[33m\]" # foreground yellow
+FBLE="\[\033[34m\]" # foreground blue
+FMAG="\[\033[35m\]" # foreground magenta
+FCYN="\[\033[36m\]" # foreground cyan
+FWHT="\[\033[37m\]" # foreground white
+BBLK="\[\033[40m\]" # background black
+BRED="\[\033[41m\]" # background red
+BGRN="\[\033[42m\]" # background green
+BYEL="\[\033[43m\]" # background yellow
+BBLE="\[\033[44m\]" # background blue
+BMAG="\[\033[45m\]" # background magenta
+BCYN="\[\033[46m\]" # background cyan
+BWHT="\[\033[47m\]" # background white
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="$HC${debian_chroot:+($debian_chroot)}$FMAG\u@\h:$FBLE\w \\$ $RS"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -80,7 +103,6 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -115,6 +137,11 @@ alias egrep="egrep -n --color"
 alias go="xdg-open 2>/dev/null"
 alias tmux="TERM=screen-256color-bce tmux"
 alias ls="ls -lt --color"
+
+alias simpool="ssh sabeyrat@simpool"
+alias caen="ssh sabeyrat@login.engin.umich.edu"
+
+
 export alias
 
 # enable bash functions
@@ -130,5 +157,9 @@ if [ -n "$DISPLAY" ]; then
   xhost +local:all > /dev/null
 fi
 
+# enable bashmarks
+source ~/.local/bin/bashmarks.sh
+
 # End Added by Nilmini Abeyratne
-export LD_LIBRARY_PATH=~/sst/local/packages/boost-1.54/lib:/usr/lib/openmpi/lib:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=~/sst/local/packages/boost-1.54/lib:/usr/lib/openmpi/lib:$LD_LIBRARY_PATH
+export PATH=$PATH:/opt/scalasca/bin

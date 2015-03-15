@@ -6,18 +6,38 @@ function dsz-simple ()
 }
 function dsz ()
 {
-  ls -Rl | awk 'BEGIN { t=0 }
-                { if ($5) t++; s+=$5 } 
-                END { printf "%d items\t", t;
-                      if (s == 0 || s < 1024 ) 
-                        printf "%.2fB\n",  s;
-                      else if ((s/1024) < 1024) 
-                        printf "%.2fKB\n",  (s/1024); 
-                      else if ((s/1048576) < 1024) 
-                        printf "%.2fMB\n",  (s/1048576); 
-                      else if ((s/1073741824) < 1024) 
-                        printf "%.2fGB\n", (s/1073741824); 
-                    }' 
+    if (( $# > 0 )); then
+        ls -Rl $@ | awk 'BEGIN { t=0 }
+                     { if ($5) t++; s+=$5 } 
+                     END { printf "%d items\t", t;
+                           if (s == 0 || s < 1024 ) 
+                             printf "%.2fB\n",  s;
+                           else if ((s/1024) < 1024) 
+                             printf "%.2fKB\n",  (s/1024); 
+                           else if ((s/1048576) < 1024) 
+                             printf "%.2fMB\n",  (s/1048576); 
+                           else if ((s/1073741824) < 1024) 
+                             printf "%.2fGB\n", (s/1073741824); 
+                           else 
+                             printf "%.2fTB\n", (s/1099511627776);
+                         }' 
+    else
+        ls -Rl | awk 'BEGIN { t=0 }
+                    { if ($5) t++; s+=$5 } 
+                    END { printf "%d items\t", t;
+                          if (s == 0 || s < 1024 ) 
+                            printf "%.2fB\n",  s;
+                          else if ((s/1024) < 1024) 
+                            printf "%.2fKB\n",  (s/1024); 
+                          else if ((s/1048576) < 1024) 
+                            printf "%.2fMB\n",  (s/1048576); 
+                          else if ((s/1073741824) < 1024) 
+                            printf "%.2fGB\n", (s/1073741824); 
+                           else 
+                             printf "%.2fTB\n", (s/1099511627776);
+                        }' 
+
+    fi
 }
 function cdu ()
 {
@@ -53,6 +73,7 @@ function gdiff ()
     vim gitdiff.output
     rm -f gitdiff.output
 }
+
 
 #function cd ()
 #{
