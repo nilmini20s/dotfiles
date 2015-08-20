@@ -129,6 +129,7 @@ fi
 alias vim='gvim -v'
 alias rm='rm -i'
 alias terminator="terminator -l mylayout -p myprofile"
+alias targz="tar -czf"
 alias untar="tar -xf"
 alias untargz="tar -zxf"
 alias untarbzip="tar -jxf"
@@ -140,6 +141,12 @@ alias ls="ls -lt --color"
 
 alias simpool="ssh sabeyrat@simpool"
 alias caen="ssh sabeyrat@login.engin.umich.edu"
+#alias clarity="ssh nilmini@141.212.106.226"
+alias clarity26="ssh nilmini@clarity26.eecs.umich.edu"
+alias clarity27="ssh nilmini@clarity27.eecs.umich.edu"
+alias qipu="ssh qipu@clarity24.eecs.umich.edu"
+alias gstat="git status"
+alias fpwsm="/home/nilmini/work/research/blackcomb/fpwsm/fpwsm.py"
 
 
 export alias
@@ -162,4 +169,5 @@ source ~/.local/bin/bashmarks.sh
 
 # End Added by Nilmini Abeyratne
 #export LD_LIBRARY_PATH=~/sst/local/packages/boost-1.54/lib:/usr/lib/openmpi/lib:$LD_LIBRARY_PATH
-export PATH=$PATH:/opt/scalasca/bin
+export PATH=$PATH:/opt/scalasca/bin:/home/nilmini/bin
+export PIN_HOME=$HOME/intelpin/pin-2.14-71313-gcc.4.4.7-linux
