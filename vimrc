@@ -63,7 +63,7 @@ set hlsearch
 set nowrap
 set cursorline
 "set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,$02c%2V\ %P%*
-"set laststatus=2
+set laststatus=2
 set splitbelow
 set splitright
 set tw=79
@@ -92,13 +92,13 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+"Plugin 'Yggdroot/indentLine'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
 "End Added by Nilmini Abeyratne
-
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
