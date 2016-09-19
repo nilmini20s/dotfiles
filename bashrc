@@ -126,7 +126,6 @@ fi
 
 
 # Begin Added by Nilmini Abeyratne
-alias vim='gvim -v'
 alias rm='rm -i'
 alias terminator="terminator -l mylayout -p myprofile"
 alias targz="tar -czf"
